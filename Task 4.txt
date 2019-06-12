@@ -1,0 +1,14 @@
+import webbrowser
+from googlesearch import search
+
+file=open("urlstore.txt","w")
+
+web = input("Enter topic to search : ")
+
+l=search(web,stop=10)
+
+for i in l:
+    
+    file.write(i+"\n")
+    
+webbrowser.open("https://www.google.com/search?q="+web)
